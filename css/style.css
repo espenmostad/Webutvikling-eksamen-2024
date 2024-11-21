@@ -1,0 +1,172 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 5;
+    font-family: Arial, sans-serif;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    grid-area: header;
+    padding-top: 2rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 5px;            
+}
+
+nav form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+nav form label {
+    display: flex; 
+    align-items: center; 
+    border: 1px solid rgb(50, 50, 50);
+    border-radius: 30px;
+    padding: 0 10px; /* Horizontal padding for spacing */
+    height: 30px; /* Sets the height of the form */
+}
+
+nav form input{
+    flex: 1; 
+    font-size: 0.8rem;
+    border: none;
+    outline: none;
+    padding: 0;
+    height: 100%;
+    border-radius: 5px;
+}
+
+nav form i {
+    margin-left: 5px; 
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;          /* Enables flexbox layout */
+    flex-direction: row;    /* Ensures items are in a row */
+    justify-content: center; /* Aligns icons horizontally in the center */
+    align-items: center;    /* Centers icons vertically */
+    list-style: none;       /* Removes default list styling */
+    padding: 0;             /* Removes default padding */
+    margin: 0;              /* Removes default margin */
+    gap: 15px;              /* Adds space between icons */
+    margin-top: 5px;
+}
+
+nav ul li {
+    font-size: 1rem;        /* Adjusts icon size */
+    cursor: pointer;        /* Makes icons clickable */
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header h4 {
+    font-size: 2rem;
+    font-weight: bolder;
+    margin: 1rem;
+}
+
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+footer hr {
+    height: 3px;              
+    background-color: lightgray;  
+    border: none;            
+    margin: 20px 0; 
+
+}
+
+footer h4 {
+    font-size: 2rem;
+    font-weight: bolder;
+    color:black;
+    margin: 0;
+    text-decoration: none;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+#shortcuts ul {
+    display: flex;          
+    flex-direction: column;   
+    justify-content: left;
+    list-style: none;     
+    padding: 0;         
+    margin: 0;            
+    margin-top: 5px;
+}
+
+#social ul {
+    display: flex;          
+    flex-direction: row;   
+    list-style: none;     
+    gap: 25px;
+    padding: 0;         
+    margin: 0;            
+    margin-top: 5px;
+}
+
+#contact ul {
+    display: flex;          
+    flex-direction: column;   
+    list-style: none;     
+    gap: 25px;
+    padding: 0;         
+    margin: 0;            
+    margin-top: 5px;
+}
+
+#footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Adjusts layout for smaller screens */
+    margin: 20px 0;
+}
+
+/* Contact, Shortcuts, and Social Media sections */
+#footer-container article {
+    flex: 1; /* Equal width for all sections */
+    padding: 10px;
+    max-width: 300px; /* Ensures sections don't grow too wide */
+    text-align: left;
+}
+
+#footer-container h3 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
